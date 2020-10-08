@@ -92,13 +92,13 @@ with open(file_to_load) as election_data:
         print(county_results)
 
         # 6f: Write a decision statement to determine the winning county and get its vote count.
-        if (voter_turnout > voter_count):
-            voter_count = voter_turnout
+        if (voter_count > voter_turnout):
+            voter_turnout = voter_count
 
             largest_county = county_name
 
         # 7: Print the county with the largest turnout to the terminal.
-        print(largest_county)
+        print(largest_county, voter_turnout)
 
     # Save the final candidate vote count to the text file.
     for candidate_name in candidate_votes:
@@ -112,7 +112,6 @@ with open(file_to_load) as election_data:
         # Print each candidate's voter count and percentage to the
         # terminal.
         print(candidate_results)
-        
 
         # Determine winning vote count, winning percentage, and candidate.
         if (votes > winning_count) and (vote_percentage > winning_percentage):
