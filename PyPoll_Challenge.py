@@ -111,7 +111,7 @@ with open(file_to_load) as election_data:
 
         # Print each candidate's voter count and percentage to the
         # terminal.
-        
+        print(candidate_results)
         
 
         # Determine winning vote count, winning percentage, and candidate.
